@@ -9,7 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace test2_sql_f
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+  [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
         public LoginPage()
@@ -22,7 +22,7 @@ namespace test2_sql_f
             {
                 if (!string.IsNullOrEmpty(number.Text) && !string.IsNullOrEmpty(code.Text))
                 {
-                    var user = await App.UserSQLite.GetUsernumerAsync(Convert.ToInt16( number.Text));
+                    var user = await App.UserSQLite.GetUsernumerAsync(Convert.ToInt16(number.Text), Convert.ToInt16(code.Text));
                     if (user != null)
                     {
                         await Navigation.PushAsync(new FinalPage(user));
@@ -34,7 +34,7 @@ namespace test2_sql_f
                     await DisplayAlert("Error", "number is empty", "Ok");
             }
         }
-    
+
 
 
         private void home_Clicked(object sender, EventArgs e)

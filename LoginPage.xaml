@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="test2_sql_f.LoginPage">
     <ContentPage.Content>
-        <StackLayout>
+       <StackLayout>
             <Frame BackgroundColor="#2196F3" Padding="1" CornerRadius="0">
                 <Label Text="Login page" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
             </Frame>
@@ -17,6 +17,5 @@
 
             </StackLayout>
         </StackLayout>
-
     </ContentPage.Content>
 </ContentPage>

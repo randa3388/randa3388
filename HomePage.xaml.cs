@@ -9,12 +9,11 @@ using Xamarin.Forms.Xaml;
 
 namespace test2_sql_f
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : ContentPage
     {
-        Users user;
 
-        public HomePage(Users user)
+        public HomePage()
         {
             InitializeComponent();
 
@@ -22,12 +21,12 @@ namespace test2_sql_f
 
         private void login_btn_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new LoginPage());  
+            Navigation.PushAsync(new LoginPage());
         }
 
         private void cntrol_btn_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ControlPage(user));
+            Navigation.PushAsync(new ControlPage());
 
         }
 

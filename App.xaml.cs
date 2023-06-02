@@ -6,8 +6,7 @@ using Xamarin.Forms.Xaml;
 namespace test2_sql_f
 {
     public partial class App : Application
-    {
-        static UserOperation db;
+    {  static UserOperation db;
 
         // Create the database connection as a singleton.
         public static UserOperation UserSQLite
@@ -21,12 +20,12 @@ namespace test2_sql_f
                 return db;
             }
         }
-        Users user;
+      
         public App()
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage( new HomePage(user));
+            MainPage = new NavigationPage(new HomePage());
 
         }
 

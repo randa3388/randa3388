@@ -9,7 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace test2_sql_f
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+      [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FinalPage : ContentPage
     {
         Users user;

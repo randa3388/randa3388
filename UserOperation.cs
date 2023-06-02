@@ -27,9 +27,9 @@ namespace test2_sql_f
             return db.Table<Users>().Where(i => i.Id == id).FirstOrDefaultAsync();
         }
         // Get a specific user by Username.
-        public Task<Users> GetUsernumerAsync(int number)
+        public Task<Users> GetUsernumerAsync(int number, int code)
         {
-            return db.Table<Users>().Where(i => i.Number == number).FirstOrDefaultAsync();
+            return db.Table<Users>().Where(i => i.Number == number &&i.Code == code).FirstOrDefaultAsync();
         }
 
         public Task<int> SaveUserAsync(Users user)

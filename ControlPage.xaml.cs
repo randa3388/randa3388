@@ -43,12 +43,12 @@ namespace test2_sql_f
                 await Navigation.PushAsync(new LoginPage());
             }
             else
-                await DisplayAlert("Error", "number is empty Or number is already existe", "Ok");
+                await DisplayAlert("Error", "number or code is empty ", "Ok");
         }
 
         private async void update_Clicked(object sender, EventArgs e)
         {
-            if ((!string.IsNullOrEmpty(number.Text)) && (!string.IsNullOrEmpty(code.Text)))
+           if (user!=null)
             {
                 this.user.Number = Convert.ToInt32(number.Text);
                 this.user.Code = Convert.ToInt32(code.Text);
@@ -66,7 +66,7 @@ namespace test2_sql_f
 
         private async void delete_Clicked(object sender, EventArgs e)
         {
-            if ((!string.IsNullOrEmpty(number.Text)) && (!string.IsNullOrEmpty(code.Text)))
+           if (user!=null)
             {
                 await App.UserSQLite.DeleteUserAsync(this.user);
                 await Navigation.PopToRootAsync();

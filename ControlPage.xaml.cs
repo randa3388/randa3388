@@ -10,6 +10,9 @@ using Xamarin.Forms.Xaml;
 
 namespace test2_sql_f
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ControlPage : ContentPage
+    {
     public Users user;
 
         public ControlPage(Users users)
